@@ -1,6 +1,7 @@
 // STEP 1: Initialize game variables
 // STEP 1a: Pick random number
 /* */
+
 // STEP 1b: Create variables to represent the three paragraphs above that will contain user feedback
 const guesses = document.querySelector('p#guesses');
 const lastResult = document.querySelector('p#lastResult');
