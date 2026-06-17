@@ -37,5 +37,26 @@ function cycleWord(col){
 //function to update sentence reads the word and builds the sentence
 function updateSentence(){
     const who = wordLists[0][index[0]];
+    const verb = wordLists[1][index[1]];
+    const adj = wordLists[2][index[2]];
+    const ani = wordLists[3][index[3]];
+    const loc = wordLists[4][index[4]];
+
+    const vowels = ["a", "e", "i", "o", "u"];
+    const article = vowels.includes(adj[0].toLowerCase()) ? "an" : "a";
+
+    document.getElementById("sentence").textContent = 
+    '${who} ${verb} ${article} ${adj} ${ani} ${loc}.';
 }
+
+//suprise picks random number word for every column
+function suprise(){
+    for(let i =0; i < wordLists.length; i++){
+        index[i] = Math.floor(Math.random() * wordLists[i].length)
+        buttons[i].textContent = wordLists[i][index[i]];
+    }
+    updateSentence();
+}
+
+updateSentence();
 
