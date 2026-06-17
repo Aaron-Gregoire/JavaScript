@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>See and Say Story Maker</title>
+
+        <link rel="stylesheet" href="styles.css"/>
+        <script src="script.js" defer></script>
+    </head>
+
+    <body>
+        <h1>See and Say Story Maker</h1>
+        <p>Press each button to cycle through words, then click suprise or playback</p>
+
+        <!--Sentence display-->
+        <div id="sentence"></div>
+
+        <!--buttons for the words-->
+        <div class="columns">
+            <div class="col">
+                Who
+                <button class="b1" onclick="cycleWord(0)">the turkey</button>
+            </div>
+            <div class="col">
+                Did
+                <button class="b2" onclick="cycleWord(1)">sat on</button>
+            </div>
+            <div class="col">
+                A/An
+                <button class="b3" onclick="cycleWord(2)">funny</button>
+            </div>
+            <div class="col">
+                Animal
+                <button class="b4" onclick="cycleWord(3)">goat</button>
+            </div>
+            <div class="col">
+                Where
+                <button class="b2" onclick="cycleWord(4)">on the moon</button>
+            </div>
+        </div>
+
+        <!-- suprise and playback-->
+         <div class="controls">
+            <button onclick="suprise()">suprise</button>
+            <button onlick="playback()">playback</button>
+         </div>
+    </body>
+</html>
