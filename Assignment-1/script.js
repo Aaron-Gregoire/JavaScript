@@ -6,7 +6,7 @@
 //3 animal
 //4 location
 
-const wordlists = [
+const wordLists = [
     ["the turkey", "mom", "dad", "the dog", "my teacher", "the elephant", "the cat"],
     ["sat on", "ate", "danced with", "saw", "doesnt like", "kissed"],
     ["funny", "scary", "goofy", "slimy", "barking", "fat"],
@@ -21,4 +21,21 @@ let index = [0, 0, 0, 0, 0];
 const buttons = document.querySelectorAll(".col button");
 
 //cycle word function
+function cycleWord(col){
+    
+    index[col] = index[col] + 1;
+
+// if past the last word go to start
+    if(index[col] >= wordLists[col].length){
+        index[col] = 0;
+    }
+// update buttons and remake sentence
+    buttons[col].textContent = wordLists[col][index[col]];
+    updateSentence();
+}
+
+//function to update sentence reads the word and builds the sentence
+function updateSentence(){
+    const who = wordLists[0][index[0]];
+}
 
