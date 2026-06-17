@@ -46,7 +46,7 @@ function updateSentence(){
     const article = vowels.includes(adj[0].toLowerCase()) ? "an" : "a";
 
     document.getElementById("sentence").textContent = 
-    '${who} ${verb} ${article} ${adj} ${ani} ${loc}.';
+    who + " " + verb + " " + article + " " + adj + " " + ani + " " + loc + ".";
 }
 
 //suprise picks random number word for every column
